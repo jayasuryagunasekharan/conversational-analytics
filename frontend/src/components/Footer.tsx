@@ -34,19 +34,19 @@ const Footer: React.FC = () => {
     <FooterContainer component="footer">
       <Container maxWidth="lg">
         <Typography variant="body2" align="center">
-          &copy; 2024 @genieincodebottle
+          &copy; 2024 @surya
         </Typography>
         <SocialIcons>
-          <SocialIcon href="https://github.com/genieincodebottle/generative-ai" target="_blank" rel="noopener noreferrer">
+          <SocialIcon href="https://github.com/jayasuryagunasekharan" target="_blank" rel="noopener noreferrer">
             <GitHubIcon />
           </SocialIcon>
-          <SocialIcon href="https://linkedin.com/in/rajesh-srivastava" target="_blank" rel="noopener noreferrer">
+          <SocialIcon href="https://www.linkedin.com/in/jayasuryaguna/" target="_blank" rel="noopener noreferrer">
             <LinkedInIcon />
           </SocialIcon>
-          <SocialIcon href="https://www.instagram.com/genieincodebottle/" target="_blank" rel="noopener noreferrer">
+          <SocialIcon href="https://www.instagram.com/surya_luffy/" target="_blank" rel="noopener noreferrer">
             <InstagramIcon />
           </SocialIcon>
-          <SocialIcon href="https://x.com/genie_aicode" target="_blank" rel="noopener noreferrer">
+          <SocialIcon href="https://x.com/surya_luffy" target="_blank" rel="noopener noreferrer">
             <TwitterIcon />
           </SocialIcon>
         </SocialIcons>
