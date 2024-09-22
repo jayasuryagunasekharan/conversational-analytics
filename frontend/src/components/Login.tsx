@@ -37,7 +37,7 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('http://localhost:8000/token',
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/token`,
         `username=${username}&password=${password}`,
         {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' }

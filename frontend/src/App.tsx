@@ -59,7 +59,7 @@ const App: React.FC = () => {
   const fetchUserData = async () => {
     if (!token) return;
     try {
-      const response = await fetch('http://localhost:8000/users/me', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/users/me`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -101,8 +101,8 @@ const App: React.FC = () => {
         'Content-Type': 'application/json'
       };
       const [analyticsResponse, feedbackResponse] = await Promise.all([
-        fetch('http://localhost:8000/analytics', { headers }),
-        fetch('http://localhost:8000/feedback', { headers })
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/analytics`, { headers }),
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/feedback`, { headers })
       ]);
       if (!analyticsResponse.ok || !feedbackResponse.ok) {
         throw new Error('Failed to fetch data');
@@ -124,7 +124,7 @@ const App: React.FC = () => {
       return;
     }
     try {
-      const response = await fetch('http://localhost:8000/feedback', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/feedback`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

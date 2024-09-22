@@ -68,7 +68,7 @@ const Home: React.FC = () => {
           throw new Error('No token found');
         }
 
-        const response = await fetch('http://localhost:8000/users/me', {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/users/me`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (!response.ok) throw new Error('Failed to fetch user data');

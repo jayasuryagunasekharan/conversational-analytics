@@ -38,7 +38,7 @@ const Register: React.FC = () => {
     setError('');
     try {
       console.log("IM_HERE before response");
-      const response = await axios.post('http://localhost:8000/register', 
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/register`, 
         { 
           username, 
           password,
