@@ -50,13 +50,7 @@ app = FastAPI()
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://jayasurya-gunasekharan.vercel.app/",
-        "http://localhost:8000",  # Allow localhost for development
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=['*']
 )
 
 # MongoDB Connection
